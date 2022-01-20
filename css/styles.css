@@ -1,0 +1,343 @@
+
+/* IMPORTANDO FUENTES */
+
+@font-face
+{
+    font-family: "Lato";
+    src: url(./fonts/Lato/Lato-Light.ttf);
+}
+
+@font-face
+{
+    font-family: "Roboto";
+    src: url(./fonts/Roboto/Roboto-Bold.ttf);
+}
+/* ---- reset ---- */
+
+body {
+    margin: 0;
+    padding:0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats, .count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+/* UTILIDADES */
+img
+{
+    max-width: 100%;
+}
+.contenedor
+{
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* MIS ESTILOS */
+
+.containerHeader
+{
+    height: 100vh;
+    background-color: blue;
+    background: linear-gradient( 90deg , #3a47d5 0% , #00d2ff 100% );
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.containMain
+{
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr) ;
+    width: 100%;
+    gap: 8rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.item h1
+{
+    font-family: "Lato";
+    font-weight: lighter;
+    line-height: 4rem;
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    color: #FFF;
+}
+.item p
+{
+    font-size: 16px;
+    color:#FFF;
+    font-family: "Lato";
+    line-height: 2rem;
+    margin: 2rem 0;
+}
+.item button
+{
+    width: 10rem;
+    height: 3rem;
+    background: transparent;
+    font-family: "Lato";
+    text-transform: uppercase;
+    color:#FFF;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+.item:nth-of-type(2)
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Intro-Text Open */
+/* Hero Section */
+#hero .hero {
+	max-width: 1200px;
+  position: absolute;
+  right: -110px;
+  top: 50px;
+}
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 3.5rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+  font-style: oblique;
+  font-weight: lighter;
+  text-decoration: none;
+  font-style: normal;
+}
+#hero h1:nth-child(1) {
+	animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+	animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 3s;
+}
+#hero h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: crimson;
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+/* End Hero Section */
+/* Keyframes */
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: rgb(0, 0, 0);
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: crimson;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+/* Intro-Text Close */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* .nav{
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+.contain{
+    position: absolute;
+    z-index: 10;
+}
+
+nav {
+  --duration: .5s;
+  --easing: ease-in-out;
+  position: relative;
+  width: 220px;
+  margin: 20px;
+}
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: -4px 0 0 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav a:hover {
+  background: #efefef;
+}
+nav .sub-menu a {
+  font-size: .9em;
+  color: #666666;
+  border-left: 2em solid white;
+  padding: .75em;
+  background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+}
+nav .sub-menu a:hover {
+  background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+}
+nav header {
+  font-weight: 600;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav header span {
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  float: right;
+}
+nav footer button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: calc(1em - 2px);
+  width: 100%;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing);
+  transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+  cursor: pointer;
+  outline: none;
+  background: #cdcdcd;
+  opacity: 0;
+}
+nav.closed a,
+nav.closed header {
+  transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+  transition-delay: var(--delay-in);
+  color: transparent;
+}
+nav.closed footer button {
+  transition-delay: 0s;
+  transform: scaleY(0.7) scaleX(0.2);
+}
+
+
+    .section-two{
+      background: grey;
+    }
+
+    .section-two h2{
+      padding-bottom:0;
+      margin-bottom: 0;
+    }
+
+    .card-one, .card-two, .card-three, .card-four, .card-five, .card-six{
+      width:250px;
+      height:250px;
+      border-radius: 30px;
+      background: rgb(32, 32, 32);
+    }
+
+    .row{
+      padding: 20px 10px;
+      margin:0px 0px;
+    }
+
+  .section-three{
+    background: yellow;
+  }
+
+  .section-four{
+    background: grey;
+  }
